@@ -1,0 +1,901 @@
+VERSION 5.00
+Begin VB.PropertyPage ppFont 
+   Caption         =   "Custom Font"
+   ClientHeight    =   5040
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   6135
+   HasDC           =   0   'False
+   LockControls    =   -1  'True
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   5040
+   ScaleWidth      =   6135
+   Begin VB.ComboBox cmb 
+      Height          =   315
+      Index           =   8
+      ItemData        =   "ppFont.pgx":0000
+      Left            =   3120
+      List            =   "ppFont.pgx":0019
+      Style           =   2  'Dropdown List
+      TabIndex        =   1
+      Top             =   360
+      Width           =   2895
+   End
+   Begin VB.ComboBox cmb 
+      Height          =   315
+      Index           =   7
+      ItemData        =   "ppFont.pgx":0080
+      Left            =   3120
+      List            =   "ppFont.pgx":00B4
+      Style           =   2  'Dropdown List
+      TabIndex        =   10
+      Top             =   3480
+      Width           =   2895
+   End
+   Begin VB.ComboBox cmb 
+      Height          =   315
+      Index           =   6
+      ItemData        =   "ppFont.pgx":012A
+      Left            =   3120
+      List            =   "ppFont.pgx":0145
+      Style           =   2  'Dropdown List
+      TabIndex        =   8
+      Top             =   2880
+      Width           =   2895
+   End
+   Begin VB.PictureBox Picture1 
+      BorderStyle     =   0  'None
+      Height          =   975
+      Left            =   120
+      ScaleHeight     =   65
+      ScaleMode       =   3  'Pixel
+      ScaleWidth      =   193
+      TabIndex        =   26
+      TabStop         =   0   'False
+      Top             =   3960
+      Width           =   2895
+   End
+   Begin VB.ComboBox cmb 
+      Height          =   315
+      Index           =   5
+      ItemData        =   "ppFont.pgx":018F
+      Left            =   3120
+      List            =   "ppFont.pgx":019C
+      Style           =   2  'Dropdown List
+      TabIndex        =   6
+      Top             =   2280
+      Width           =   2895
+   End
+   Begin VB.ComboBox cmb 
+      Height          =   315
+      Index           =   4
+      ItemData        =   "ppFont.pgx":01CC
+      Left            =   3120
+      List            =   "ppFont.pgx":01D9
+      Style           =   2  'Dropdown List
+      TabIndex        =   4
+      Top             =   1680
+      Width           =   2895
+   End
+   Begin VB.ComboBox cmb 
+      Height          =   315
+      Index           =   3
+      ItemData        =   "ppFont.pgx":020C
+      Left            =   120
+      List            =   "ppFont.pgx":0219
+      Style           =   2  'Dropdown List
+      TabIndex        =   9
+      Top             =   3480
+      Width           =   2895
+   End
+   Begin VB.ComboBox cmb 
+      Height          =   315
+      Index           =   2
+      ItemData        =   "ppFont.pgx":025D
+      Left            =   120
+      List            =   "ppFont.pgx":027F
+      Style           =   2  'Dropdown List
+      TabIndex        =   7
+      Top             =   2880
+      Width           =   2895
+   End
+   Begin VB.ComboBox cmb 
+      Height          =   315
+      Index           =   1
+      ItemData        =   "ppFont.pgx":034B
+      Left            =   120
+      List            =   "ppFont.pgx":0376
+      Style           =   2  'Dropdown List
+      TabIndex        =   5
+      Top             =   2280
+      Width           =   2895
+   End
+   Begin VB.ComboBox cmb 
+      Height          =   315
+      Index           =   0
+      ItemData        =   "ppFont.pgx":040D
+      Left            =   120
+      List            =   "ppFont.pgx":040F
+      Sorted          =   -1  'True
+      TabIndex        =   3
+      Top             =   1680
+      Width           =   2895
+   End
+   Begin VB.CheckBox chk 
+      Caption         =   "Strikeout"
+      Height          =   255
+      Index           =   2
+      Left            =   3120
+      TabIndex        =   15
+      Top             =   4680
+      Width           =   975
+   End
+   Begin VB.CheckBox chk 
+      Caption         =   "Underline"
+      Height          =   255
+      Index           =   1
+      Left            =   3120
+      TabIndex        =   13
+      Top             =   4320
+      Width           =   975
+   End
+   Begin VB.CheckBox chk 
+      Caption         =   "Italic"
+      Height          =   255
+      Index           =   0
+      Left            =   3120
+      TabIndex        =   11
+      Top             =   3960
+      Width           =   735
+   End
+   Begin VB.CommandButton cmd 
+      Caption         =   "&Browse ..."
+      Height          =   495
+      Left            =   3120
+      TabIndex        =   2
+      Top             =   840
+      Width           =   2895
+   End
+   Begin VB.ListBox lst 
+      Height          =   960
+      ItemData        =   "ppFont.pgx":0411
+      Left            =   120
+      List            =   "ppFont.pgx":0413
+      Sorted          =   -1  'True
+      Style           =   1  'Checkbox
+      TabIndex        =   0
+      Top             =   360
+      Width           =   2895
+   End
+   Begin VB.TextBox txt 
+      Height          =   300
+      Index           =   2
+      Left            =   5160
+      Locked          =   -1  'True
+      TabIndex        =   16
+      Text            =   "0"
+      Top             =   4635
+      Width           =   615
+   End
+   Begin VB.TextBox txt 
+      Height          =   300
+      Index           =   1
+      Left            =   5160
+      Locked          =   -1  'True
+      TabIndex        =   14
+      Text            =   "0"
+      Top             =   4275
+      Width           =   615
+   End
+   Begin VB.TextBox txt 
+      Height          =   300
+      Index           =   0
+      Left            =   5160
+      Locked          =   -1  'True
+      TabIndex        =   12
+      Text            =   "-11"
+      Top             =   3915
+      Width           =   615
+   End
+   Begin prjBeeAV.ucUpDown ud 
+      Height          =   285
+      Index           =   0
+      Left            =   5760
+      Top             =   3930
+      Width           =   360
+      _ExtentX        =   635
+      _ExtentY        =   503
+   End
+   Begin prjBeeAV.ucUpDown ud 
+      Height          =   285
+      Index           =   1
+      Left            =   5775
+      Top             =   4275
+      Width           =   360
+      _ExtentX        =   635
+      _ExtentY        =   503
+   End
+   Begin prjBeeAV.ucUpDown ud 
+      Height          =   285
+      Index           =   2
+      Left            =   5745
+      Top             =   4635
+      Width           =   360
+      _ExtentX        =   635
+      _ExtentY        =   503
+   End
+   Begin VB.Label Label1 
+      Caption         =   "Source of the font:"
+      Height          =   255
+      Index           =   12
+      Left            =   3120
+      TabIndex        =   30
+      Top             =   120
+      Width           =   1455
+   End
+   Begin VB.Label Label1 
+      Caption         =   "Properties to set:"
+      Height          =   255
+      Index           =   11
+      Left            =   120
+      TabIndex        =   29
+      Top             =   120
+      Width           =   1455
+   End
+   Begin VB.Label Label1 
+      Caption         =   "Weight:"
+      Height          =   255
+      Index           =   10
+      Left            =   3120
+      TabIndex        =   28
+      Top             =   3240
+      Width           =   1095
+   End
+   Begin VB.Label Label1 
+      Caption         =   "Family:"
+      Height          =   255
+      Index           =   3
+      Left            =   3120
+      TabIndex        =   27
+      Top             =   2640
+      Width           =   1095
+   End
+   Begin VB.Label Label1 
+      Caption         =   "Pitch:"
+      Height          =   255
+      Index           =   9
+      Left            =   3120
+      TabIndex        =   25
+      Top             =   2040
+      Width           =   1095
+   End
+   Begin VB.Label Label1 
+      Caption         =   "Quality:"
+      Height          =   255
+      Index           =   8
+      Left            =   3120
+      TabIndex        =   24
+      Top             =   1440
+      Width           =   1095
+   End
+   Begin VB.Label Label1 
+      Caption         =   "Clip Precision"
+      Height          =   255
+      Index           =   7
+      Left            =   120
+      TabIndex        =   23
+      Top             =   3240
+      Width           =   1095
+   End
+   Begin VB.Label Label1 
+      Caption         =   "Out Precision:"
+      Height          =   255
+      Index           =   6
+      Left            =   120
+      TabIndex        =   22
+      Top             =   2640
+      Width           =   1095
+   End
+   Begin VB.Label Label1 
+      Caption         =   "Charset:"
+      Height          =   255
+      Index           =   5
+      Left            =   120
+      TabIndex        =   21
+      Top             =   2040
+      Width           =   855
+   End
+   Begin VB.Label Label1 
+      Caption         =   "Face name:"
+      Height          =   255
+      Index           =   4
+      Left            =   120
+      TabIndex        =   20
+      Top             =   1440
+      Width           =   975
+   End
+   Begin VB.Label Label1 
+      Alignment       =   1  'Right Justify
+      Caption         =   "Width:"
+      Height          =   255
+      Index           =   1
+      Left            =   4515
+      TabIndex        =   19
+      Top             =   4350
+      Width           =   615
+   End
+   Begin VB.Label Label1 
+      Alignment       =   1  'Right Justify
+      Caption         =   "Orient/Esc:"
+      Height          =   255
+      Index           =   2
+      Left            =   4275
+      TabIndex        =   18
+      Top             =   4695
+      Width           =   855
+   End
+   Begin VB.Label Label1 
+      Alignment       =   1  'Right Justify
+      Caption         =   "Height:"
+      Height          =   255
+      Index           =   0
+      Left            =   4515
+      TabIndex        =   17
+      Top             =   3990
+      Width           =   615
+   End
+End
+Attribute VB_Name = "ppFont"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+'==================================================================================================
+'ppFont.pag                  12/15/04
+'
+'           PURPOSE:
+'               Provides design time access to cFont.cls
+'
+'==================================================================================================
+
+Option Explicit
+
+Private WithEvents moFont As cFont
+Attribute moFont.VB_VarHelpID = -1
+
+Private mbIgnoreFontChange As Boolean
+Private mbIgnoreControlChange As Boolean
+Private mbUnmatched As Boolean
+Private mbFirstShowProps As Boolean
+
+Private Property Get Proxy(ByVal o As Object) As pcSupportFontPropPage
+    '---------------------------------------------------------------------------------------
+    ' Date      : 2/21/05
+    ' Purpose   : Get an object used to communicate with the usercontrol.
+    '             see pcSupportFontPropPage.cls
+    '---------------------------------------------------------------------------------------
+    Select Case True
+    Case TypeOf o Is ucListView
+        Dim lvw      As ucListView: Set lvw = o
+        Set Proxy = lvw.fSupportFontPropPage()
+    End Select
+    'debug.assert Not Proxy Is Nothing
+End Property
+
+Private Sub pCheckFont()
+    '---------------------------------------------------------------------------------------
+    ' Date      : 2/21/05
+    ' Purpose   : Keep the moFont variable current with the selected controls.
+    '---------------------------------------------------------------------------------------
+    Dim lsProp        As String
+    Dim loObject      As Object
+
+    mbIgnoreFontChange = True
+    mbUnmatched = False
+
+    Set moFont = Nothing
+
+    On Error Resume Next
+
+    If lst.SelCount > 0& Then
+        Dim i           As Long
+        Dim loFont      As cFont
+        
+        For i = 0 To lst.ListCount - 1&
+            If lst.Selected(i) Then
+                lsProp = lst.List(i)
+                For Each loObject In SelectedControls
+
+                    Set loFont = CallByName(loObject, lsProp, VbGet)
+
+                    If moFont Is Nothing Then
+                        Set moFont = loFont.FontData(fntDataTypeCFont)
+                    Else
+                        If moFont.Compare(loFont) Then
+                            mbUnmatched = True
+                            Exit For
+                        End If
+                    End If
+
+                Next
+                If mbUnmatched Then Exit For
+            End If
+        Next
+    Else
+        Set moFont = Nothing
+    End If
+
+    On Error GoTo 0
+    mbIgnoreFontChange = False
+
+    pShowFontInfo
+    Picture1.Refresh
+End Sub
+
+Private Sub chk_Click(Index As Integer)
+    '---------------------------------------------------------------------------------------
+    ' Date      : 2/21/05
+    ' Purpose   : Change font property values.
+    '---------------------------------------------------------------------------------------
+    If Not mbIgnoreControlChange Then
+
+        Dim lB      As Boolean
+        lB = CBool(chk(Index).Value)
+        Select Case Index
+        Case 0
+            moFont.Italic = lB
+        Case 1
+            moFont.Underline = lB
+        Case 2
+            moFont.Strikeout = lB
+        End Select
+
+    End If
+End Sub
+
+Private Sub cmb_Change(Index As Integer)
+    '---------------------------------------------------------------------------------------
+    ' Date      : 2/21/05
+    ' Purpose   : Change font property values.
+    '---------------------------------------------------------------------------------------
+    If Not mbIgnoreControlChange Then
+
+        If Index = 0 Then
+            On Error GoTo handler
+            moFont.FaceName = cmb(Index).Text
+            'debug.print "FaceName: " & moFont.FaceName
+handler:
+        End If
+
+    End If
+
+End Sub
+
+Private Sub cmb_Click(Index As Integer)
+    '---------------------------------------------------------------------------------------
+    ' Date      : 2/21/05
+    ' Purpose   : Change font property values.
+    '---------------------------------------------------------------------------------------
+    If Not mbIgnoreControlChange Then
+        On Error GoTo handler
+
+        Dim liItemData      As Long
+        liItemData = cmb(Index).ItemData(cmb(Index).ListIndex)
+
+        Select Case Index
+        Case 0
+            moFont.FaceName = cmb(Index).Text
+        Case 1
+            moFont.Charset = liItemData
+        Case 2
+            moFont.OutPrecision = liItemData
+        Case 3
+            moFont.ClipPrecision = liItemData
+        Case 4
+            moFont.Quality = liItemData
+        Case 5
+            moFont.PitchAndFamily = (moFont.PitchAndFamily And Not &HF&) Or liItemData
+        Case 6
+            moFont.PitchAndFamily = (moFont.PitchAndFamily And Not &H70&) Or liItemData
+        Case 7
+            moFont.Weight = liItemData
+        Case 8
+            moFont.Source = liItemData
+            pPutAmbient
+        End Select
+
+handler:
+    End If
+
+End Sub
+
+Private Sub cmd_Click()
+    '---------------------------------------------------------------------------------------
+    ' Date      : 2/21/05
+    ' Purpose   : Browse for a font.
+    '---------------------------------------------------------------------------------------
+
+    Dim lHwnd            As Long
+    Dim lhWndParent      As Long
+    
+    Dim lsTooFar As String:     lsTooFar = StrConv("IDEOwner" & vbNullChar, vbFromUnicode)
+    Dim lpTooFar As Long:       lpTooFar = StrPtr(lsTooFar)
+    Dim lpClassName As Long:    lpClassName = MemAllocFromString(ZeroL, MAX_PATH)
+    
+    If lpClassName Then
+        lHwnd = PropertyPage.hWnd
+    
+        lhWndParent = GetParent(lHwnd)
+        GetClassName lhWndParent, ByVal lpClassName, MAX_PATH
+        
+        Do While CBool(lhWndParent) And CBool(lstrcmp(lpClassName, lpTooFar))
+            lHwnd = lhWndParent
+            lhWndParent = GetParent(lHwnd)
+            GetClassName lhWndParent, ByVal lpClassName, MAX_PATH
+        Loop
+        
+        MemFree lpClassName
+    End If
+    
+
+    
+    cmd.Enabled = False
+    moFont.Browse lHwnd
+    cmd.Enabled = True
+    
+End Sub
+
+Private Sub lst_ItemCheck(Item As Integer)
+    '---------------------------------------------------------------------------------------
+    ' Date      : 2/21/05
+    ' Purpose   : Selection of properties has changed, update the font.
+    '---------------------------------------------------------------------------------------
+    If Not mbIgnoreControlChange Then pCheckFont
+End Sub
+
+Private Sub moFont_Changed()
+    '---------------------------------------------------------------------------------------
+    ' Date      : 2/21/05
+    ' Purpose   : Font properties were altered.  Update the displayed font.
+    '---------------------------------------------------------------------------------------
+    If Not mbIgnoreFontChange Then
+        mbUnmatched = False
+        pShowFontInfo
+        Picture1.Refresh
+        PropertyPage.Changed = True
+    End If
+End Sub
+
+Private Sub pPutAmbient()
+    '---------------------------------------------------------------------------------------
+    ' Date      : 2/21/05
+    ' Purpose   : Get the ambient font from the first selected control.
+    '---------------------------------------------------------------------------------------
+    Dim loFont      As StdFont
+    Proxy(SelectedControls(0)).GetAmbientFont loFont
+    moFont.OnAmbientFontChanged loFont
+End Sub
+
+Private Sub PropertyPage_ApplyChanges()
+    '---------------------------------------------------------------------------------------
+    ' Date      : 2/21/05
+    ' Purpose   : Apply the current font to all selected controls.
+    '---------------------------------------------------------------------------------------
+    On Error Resume Next
+    If Not moFont Is Nothing Then
+        Dim loObject      As Object
+        Dim lsProp        As String
+        Dim loFont        As cFont
+
+        Dim i As Long
+
+        For i = 0& To lst.ListCount - 1&
+            If lst.Selected(i) Then
+                lsProp = lst.List(i)
+                For Each loObject In SelectedControls
+                    Set loFont = Nothing
+                    Set loFont = CallByName(loObject, lsProp, VbGet)
+                    Set loFont.FontData = moFont
+                Next
+            End If
+        Next
+        pCheckFont
+    End If
+    On Error GoTo 0
+End Sub
+
+Private Sub PropertyPage_EditProperty(PropertyName As String)
+    '---------------------------------------------------------------------------------------
+    ' Date      : 2/21/05
+    ' Purpose   : Select the property in the list.
+    '---------------------------------------------------------------------------------------
+    Dim i      As Long: i = pFindString(PropertyName, True)
+    Dim j      As Long
+
+    mbIgnoreControlChange = True
+
+    For j = 0 To lst.ListCount - 1&
+        lst.Selected(i) = (j = i)
+    Next
+
+    mbIgnoreControlChange = False
+
+    pCheckFont
+
+End Sub
+
+Private Sub PropertyPage_Initialize()
+    Dim i      As Long
+    For i = 0& To Screen.FontCount - 1&
+        cmb(0).AddItem Screen.Fonts(i)
+    Next
+    pCheckFont
+End Sub
+
+Private Sub Picture1_Paint()
+    '---------------------------------------------------------------------------------------
+    ' Date      : 2/21/05
+    ' Purpose   : Paint sample text using the current font.
+    '---------------------------------------------------------------------------------------
+    Dim lhFont         As Long
+    Dim lhFontOld      As Long
+    
+    If moFont Is Nothing Or mbUnmatched Then
+        Picture1.ForeColor = vbGrayText
+    Else
+        Picture1.ForeColor = vbWindowText
+        lhFont = moFont.GetHandle()
+        If lhFont Then lhFontOld = SelectObject(Picture1.hdc, lhFont)
+    End If
+    
+    Dim tSize      As SIZE
+    Dim ls         As String
+    
+    With Picture1
+        ls = Switch(mbUnmatched, "Unmatched", .ForeColor = vbWindowText, "Sample Text", True, vbNullString)
+
+        GetTextExtentPoint32W .hdc, ls, Len(ls), tSize
+
+        .CurrentY = .ScaleHeight \ 2& - tSize.cy \ 2&
+        .CurrentX = .ScaleWidth \ 2& - tSize.cx \ 2&
+
+        Picture1.Print ls
+
+    End With
+
+    If lhFontOld Then SelectObject Picture1.hdc, lhFontOld
+    If lhFont Then moFont.ReleaseHandle lhFont 'Else 'debug.assert False
+
+
+End Sub
+
+Private Sub PropertyPage_SelectionChanged()
+    '---------------------------------------------------------------------------------------
+    ' Date      : 2/21/05
+    ' Purpose   : Query the selected objects for font properties and add them to the list.
+    '---------------------------------------------------------------------------------------
+    Dim loControl      As Object
+    
+    mbFirstShowProps = True
+    
+    For Each loControl In PropertyPage.SelectedControls
+        Proxy(loControl).AddFonts Me
+        mbFirstShowProps = False
+    Next
+    
+    pCheckFont
+    
+    If lst.SelCount = 0& And lst.ListCount > 0& Then
+        Dim liIndex      As Long
+        liIndex = pFindString("Font", True)
+        If liIndex = -1& Then liIndex = 0&
+        lst.Selected(liIndex) = True
+    End If
+    
+End Sub
+
+Public Function ShowProps(ParamArray vProps() As Variant) As Boolean
+    '---------------------------------------------------------------------------------------
+    ' Date      : 2/21/05
+    ' Purpose   : Allow the usercontrol to tell us which font properties to display.
+    '---------------------------------------------------------------------------------------
+
+    Dim i      As Long
+    Dim j      As Long
+
+    Dim lsProps() As String
+    Dim liCount As Long
+
+    liCount = UBound(vProps) - LBound(vProps) + 1&
+    ReDim lsProps(0 To liCount - 1&)
+
+    For i = 0 To liCount - 1&
+        j = i + LBound(vProps)
+
+        If Not IsMissing(vProps(j)) Then
+            lsProps(i) = CStr(vProps(j))
+        End If
+
+    Next
+
+    For i = lst.ListCount - 1& To 0& Step -1&
+        For j = 0 To liCount - 1&
+            If StrComp(lst.List(j), lsProps(i)) = 0& Then Exit For
+        Next
+        If j = liCount Then lst.RemoveItem i
+    Next
+
+    If mbFirstShowProps Then
+
+        For i = 0 To liCount - 1&
+            If Len(lsProps(i)) Then
+                If pFindString(lsProps(i), True) = -1& Then lst.AddItem lsProps(i)
+            End If
+        Next
+
+    End If
+
+    ShowProps = lst.ListCount > 0&
+
+End Function
+
+Private Function pFindString(Item As String, ByVal Exact As Boolean) As Long
+    Dim lsAnsi      As String
+    lsAnsi = StrConv(Item & vbNullChar, vbFromUnicode)
+    pFindString = SendMessage(lst.hWnd, IIf(Exact, LB_FINDSTRINGEXACT, LB_FINDSTRING), -1, ByVal StrPtr(lsAnsi))
+End Function
+
+Private Sub pSetByItemData(ByVal oCmb As ComboBox, ByVal iData As Long)
+    Dim i      As Long
+    For i = 0 To oCmb.ListCount - 1&
+        If oCmb.ItemData(i) = iData Then
+            oCmb.ListIndex = i
+            Exit Sub
+        End If
+    Next
+    'debug.assert False
+End Sub
+
+Private Sub pShowFontInfo()
+    '---------------------------------------------------------------------------------------
+    ' Date      : 2/21/05
+    ' Purpose   : Update to gui to display the current font.
+    '---------------------------------------------------------------------------------------
+    Dim loLbl      As Label
+
+    On Error Resume Next
+    mbIgnoreControlChange = True
+
+    If Not moFont Is Nothing Then
+        cmb(0).Text = moFont.FaceName
+        cmb(0).Enabled = True
+        pSetByItemData cmb(1), moFont.Charset
+        cmb(1).Enabled = True
+        pSetByItemData cmb(2), moFont.OutPrecision
+        cmb(2).Enabled = True
+        pSetByItemData cmb(3), moFont.ClipPrecision
+        cmb(3).Enabled = True
+        pSetByItemData cmb(4), moFont.Quality
+        cmb(4).Enabled = True
+        pSetByItemData cmb(5), moFont.PitchAndFamily And &HF&
+        cmb(5).Enabled = True
+        pSetByItemData cmb(6), moFont.PitchAndFamily And &H70&
+        cmb(6).Enabled = True
+        pSetByItemData cmb(7), moFont.Weight
+        cmb(7).Enabled = True
+        pSetByItemData cmb(8), moFont.Source
+        cmb(8).Enabled = True
+
+        If Len(txt(0).Tag) Then
+
+            txt(0).Text = txt(0).Tag
+            txt(1).Text = txt(1).Tag
+            txt(2).Text = txt(2).Tag
+
+            txt(0).Tag = vbNullString
+            txt(1).Tag = vbNullString
+            txt(2).Tag = vbNullString
+
+        End If
+
+        ud(0).Value = moFont.Height
+        ud(1).Value = moFont.Width
+        ud(2).Value = moFont.Escapement
+        ud(0).Enabled = True
+        ud(1).Enabled = True
+        ud(2).Enabled = True
+
+        chk(0).Value = Abs(moFont.Italic)
+        chk(1).Value = Abs(moFont.Underline)
+        chk(2).Value = Abs(moFont.Strikeout)
+
+        chk(0).Enabled = True
+        chk(1).Enabled = True
+        chk(2).Enabled = True
+
+        txt(0).Enabled = True
+        txt(1).Enabled = True
+        txt(2).Enabled = True
+
+        cmd.Enabled = True
+
+        For Each loLbl In Label1
+            loLbl.Enabled = True
+        Next
+
+    Else
+        cmb(0).Enabled = False
+        cmb(0).Text = vbNullString
+        cmb(1).ListIndex = -1&
+        cmb(1).Enabled = False
+        cmb(2).ListIndex = -1&
+        cmb(2).Enabled = False
+        cmb(3).ListIndex = -1&
+        cmb(3).Enabled = False
+        cmb(4).ListIndex = -1&
+        cmb(4).Enabled = False
+        cmb(5).ListIndex = -1&
+        cmb(5).Enabled = False
+        cmb(6).ListIndex = -1&
+        cmb(6).Enabled = False
+        cmb(7).ListIndex = -1&
+        cmb(7).Enabled = False
+        cmb(8).ListIndex = -1&
+        cmb(8).Enabled = False
+
+        ud(0).Enabled = False
+        ud(1).Enabled = False
+        ud(2).Enabled = False
+
+        chk(0).Enabled = False
+        chk(1).Enabled = False
+        chk(2).Enabled = False
+
+        txt(0).Enabled = False
+        txt(1).Enabled = False
+        txt(2).Enabled = False
+
+        If Len(txt(0).Text) Then
+            txt(0).Tag = txt(0).Text
+            txt(1).Tag = txt(1).Text
+            txt(2).Tag = txt(2).Text
+
+            txt(0).Text = vbNullString
+            txt(1).Text = vbNullString
+            txt(2).Text = vbNullString
+        End If
+
+        cmd.Enabled = False
+
+        For Each loLbl In Label1
+            loLbl.Enabled = (loLbl.Index = 11)
+        Next
+
+    End If
+
+    On Error GoTo 0
+    mbIgnoreControlChange = False
+
+End Sub
+
+Private Sub ud_Change(Index As Integer, ByVal iValue As Long)
+    '---------------------------------------------------------------------------------------
+    ' Date      : 2/21/05
+    ' Purpose   : Change font property values.
+    '---------------------------------------------------------------------------------------
+    On Error GoTo handler
+    If Not mbIgnoreControlChange Then
+        Dim liVal      As Long
+        liVal = ud(Index).Value
+        Select Case Index
+        Case 0
+            moFont.Height = liVal
+        Case 1
+            moFont.Width = liVal
+        Case 2
+            moFont.Orientation = liVal
+            moFont.Escapement = liVal
+        End Select
+handler:
+    End If
+End Sub

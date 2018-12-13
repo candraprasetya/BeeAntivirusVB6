@@ -1,0 +1,31 @@
+' Untuk String dengan Fix Delete
+
+Catatan :
+[Main Key]
+HKCR,HKCU,HKLM,HKU,HKCC
+
+[Singkatan Path]
+SMWC=SOFTWARE\microsoft\Windows\CurrentVersion
+SMW=SOFTWARE\microsoft\Windows
+SM=SOFTWARE\microsoft
+SMWN=SOFTWARE\microsoft\Windows Nt
+SMWNC=SOFTWARE\microsoft\Windows Nt\CurrentVersion
+CI=Control Panel\International
+CD=Control Panel\Desktop
+
+[Singkatan Value]
+WIN=Windows Path (misal C:\windows)
+
+[Pengecualian]
+Tanda "~" tidak boleh dipakai selain sparator
+False ditulis jika tidak ada TambahanPath atau Singkatan Path
+
+[Struktur]
+MainKey~Singkatan~TambahanPath~Value~BadValue~Keterangan
+
+[Mulai Database]
+HKLM~SMWC~\RUN~Windows file monitor~WIN\system32\1986\ctfm0n.exe~D.War Startup 1
+HKLM~SMWC~\RUN~Windows server~WIN\system32\3003\smsvr.exe~D.War Startup 2
+HKLM~SMWC~\RUN~Windows services controler~WIN\system32\Micros0ft\winserv.exe~D.War Startup 3
+HKLM~SMWC~\RUN~MaHaDeWa~WIN\MaHaDewa.dll.vbs
+HKLM~SMWC~\RUN~WinXp~WIN\System32\WinXp.vbs

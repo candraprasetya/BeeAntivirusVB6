@@ -1,0 +1,63 @@
+' Untuk String dengan Fix Set Ulang
+
+Catatan :
+[Main Key]
+HKCR,HKCU,HKLM,HKU,HKCC
+
+[Singkatan Path]
+SMWC=SOFTWARE\Microsoft\Windows\CurrentVersion
+SMW=SOFTWARE\microsoft\Windows
+SM=SOFTWARE\microsoft
+SMWN=SOFTWARE\microsoft\Windows Nt
+SMWNC=SOFTWARE\microsoft\Windows Nt\CurrentVersion
+CI=Control Panel\International
+CD=Control Panel\Desktop
+
+[Singkatan Value]
+WIN=Windows Path (misal C:\windows)
+
+[Pengecualian]
+Tanda "~" tidak boleh dipakai selain sparator
+False ditulis jika tidak ada TambahanPath atau Singkatan Path
+
+[Struktur]
+MainKey~Singkatan~TambahanPath~Value~ValueBenar
+
+[Mulai Database]
+HKCU~CD~False~AutoEndTasks~0
+HKCU~CD~False~PowerOffActive~0
+HKCU~CD~False~PowerOffTimeOut~0
+HKCU~CD~False~ScreenSaveActive~0
+HKCU~CD~False~ScreenSaverIsSecure~0
+HKCU~CD~False~SCRNSAVE.EXE~WIN\system32\logon.scr
+HKCU~CI~False~s2359~PM
+HKCU~CI~False~sCurrency~$
+HKCU~CI~False~sLongDate~dddd, MMMM dd, yyyy
+HKCU~CI~False~sTime~:
+HKCU~SM~\Internet Explorer\Main~Local Page~WIN\system32\blank.htm
+HKCU~SMWNC~\Winlogon~ParseAutoexec~1
+HKLM~SMWC~\policies\system~legalnoticetext~
+HKLM~SMWNC~\Winlogon~legalnoticecaption~
+HKLM~SMWNC~\Winlogon~legalnoticetext~
+HKLM~SMWNC~\Winlogon~System~
+HKLM~SMWNC~\Winlogon~Userinit~WIN\system32\userinit.exe
+HKLM~SMWNC~\Winlogon~Shell~Explorer.exe
+HKLM~False~SYSTEM\ControlSet001\Control\SafeBoot~AlternateShell~cmd.exe
+HKLM~False~SYSTEM\ControlSet002\Control\SafeBoot~AlternateShell~cmd.exe
+HKLM~False~SYSTEM\CurrentControlSet\Control\SafeBoot~AlternateShell~cmd.exe
+HKCR~False~batfile\shell\open\command~~"%1" %*
+HKCR~False~cmdfile\shell\open\command~~"%1" %*
+HKCR~False~exefile\shell\open\command~~"%1" %*
+HKCR~False~scrfile\shell\open\command~~"%1" /S
+HKCR~False~piffile\shell\open\command~~"%1" %*
+HKCR~False~comfile\shell\open\command~~"%1" %*
+HKCR~False~exefile~~Application
+HKCR~False~Excel.Sheet.8~~Microsoft Excel Worksheet
+HKCR~False~Word.Document.8~~Microsoft Word Document
+HKCR~False~.exe~~exefile
+HKCR~False~.reg~~regfile
+HKCR~False~.scr~~scrfile
+HKCR~False~.com~~comfile
+HKCR~False~.bat~~batfile
+HKCR~False~.txt~~txtfile
+Buffer~Buffer~Buffer~Buffer [kusus db ini wajib]

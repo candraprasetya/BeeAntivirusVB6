@@ -1,0 +1,90 @@
+' Untuk DWORD dengan Fix Set Ulang
+
+Catatan :
+[Main Key]
+HKCR,HKCU,HKLM,HKU,HKCC
+
+[Singkatan Path]
+SMWC=SOFTWARE\Microsoft\Windows\CurrentVersion
+SMW=SOFTWARE\microsoft\Windows
+SM=SOFTWARE\microsoft
+SMWN=SOFTWARE\microsoft\Windows Nt
+SMWNC=SOFTWARE\microsoft\Windows Nt\CurrentVersion
+CI=Control Panel\International
+CD=Control Panel\Desktop
+
+[Singkatan Value]
+WIN=Windows Path (misal C:\windows)
+
+[Pengecualian]
+Tanda "~" tidak boleh dipakai selain sparator
+False ditulis jika tidak ada TambahanPath atau Singkatan Path
+
+[Struktur]
+MainKey~Singkatan~TambahanPath~Value~ValueBenar
+
+[Mulai Database]
+HKCU~SMWC~\Policies\System~DisableTaskMgr~0
+HKCU~SMWC~\Policies\System~DisableRegistryTools~0
+HKCU~SMWC~\Policies\System~DisableCMD~0
+HKCU~SMWC~\Policies\System~NoDispSettingsPage~0
+HKCU~SMWC~\Policies\System~NoDispBackgroundPage~0
+HKCU~SMWC~\Policies\System~NoScrSavPage~0
+HKCU~SMWC~\Policies\System~NoDispApprearancePage~0
+HKCU~SMWC~\Policies\System~NoDispCpl~0
+HKLM~SMWC~\Policies\System~DisableRegistryTools~0
+HKLM~SMWC~\Policies\System~DisableTaskMgr~0
+HKCU~SMWC~\Policies\Explorer~ClearRecentDocsOnExit~0
+HKCU~SMWC~\Policies\Explorer~NoClose~0
+HKCU~SMWC~\Policies\Explorer~NoDesktop~0
+HKCU~SMWC~\Policies\Explorer~NoFind~0
+HKCU~SMWC~\Policies\Explorer~NoRun~0
+HKCU~SMWC~\Policies\Explorer~NoFolderOptions~0
+HKCU~SMWC~\Policies\Explorer~NoLogOff~0
+HKCU~SMWC~\Policies\Explorer~NoLowDiskSpaceChecks~0
+HKCU~SMWC~\Policies\Explorer~NoDesktopWizzard~0
+HKCU~SMWC~\Policies\Explorer~NoDriveTypeAutorun~0
+HKCU~SMWC~\Policies\Explorer~NoRecentDocsHistory~0
+HKCU~SMWC~\Policies\Explorer~NoRecycleFiles~0
+HKCU~SMWC~\Policies\Explorer~NoTrayContextMenu~0
+HKCU~SMWC~\Policies\Explorer~NoViewContextMenu~0
+HKCU~SMWC~\Policies\System~NoRun~0
+HKCU~SMWC~\Policies\System~NoStartMenuEjectPC~0
+HKCU~SMWC~\Policies\System~NoTrayContextMenu~0
+HKCU~SMWC~\Policies\System~NoViewContextMenu~0
+HKCU~SMWC~\Policies\System~NoWelcomeScreen~0
+HKCU~SMWC~\Policies\System~NoFolderOptions~0
+HKLM~False~SOFTWARE\Policies\Microsoft\Windows\Installer~EnableAdminTSRemote~1
+HKLM~False~SOFTWARE\Policies\Microsoft\Windows\Installer~LimitSystemRestoreCheckpointing~0
+HKLM~False~SYSTEM\ControlCurrentSet\Control\CrashControl~0
+HKCU~False~Software\Policies\Microsoft\Windows\System~DisableCMD~0
+HKLM~False~SOFTWARE\Policies\Microsoft\Windows Script Host\Settings~TrustPolicy~0
+HKLM~SMWNC~\Winlogon~AutoRestartShell~1
+HKLM~SMWNC~\Winlogon~forceunlocklogon~0
+HKLM~SMWNC~\Winlogon~HibernationPreviouslyEnabled~1
+HKLM~SMWNC~\Winlogon~LogonType~1
+HKLM~SMWNC~\Winlogon~ShowLogonOptions~0
+HKLM~SMWNC~\Winlogon~Prefetcher~1
+HKLM~SMWNC~\Winlogon~ExitCode~0
+HKLM~SMWNC~False~NoTrayItemsDisplay~0
+HKLM~SMWNC~False~NoAddPrinter~0
+HKLM~SMWNC~False~NoNetHood~0
+HKLM~SMWNC~False~NoRecentDocsNetHood~0
+HKLM~SMWNC~False~NoEntireNetwork~0
+HKLM~SMWNC~False~NoWorkgroupContents~0
+HKLM~SMWNC~False~NoNetConnectDisconnect~0
+HKLM~SMWNC~False~NoComputersNearMe~0
+HKLM~SMWC~\SystemFileProtection~ShowPopups~1
+HKLM~False~SOFTWARE\Policies\Microsoft\Windows NT\SystemRestore~DisableConfig~0
+HKLM~False~SOFTWARE\Policies\Microsoft\Windows NT\SystemRestore~DisableSR~0
+HKCU~False~Control Panel~Opened~1
+HKCU~False~Control Panel\Mouse~1
+HKCU~SMWC~\Explorer\Advanced~Hidden~1
+HKCU~SMWC~\Explorer\Advanced~HideFileExt~0
+HKCU~SMWC~\Explorer\Advanced~HideIcons~0
+HKCU~SMWC~\Explorer\Advanced~ShowCompColor~1
+HKCU~SMWC~\Explorer\Advanced~ShowSuperHidden~1
+HKCU~SMWC~\Explorer\Advanced~StartMenuInit~2
+HKCU~SMWC~\Explorer\Advanced~SuperHidden~1
+HKU~False~Software\Microsoft\Security Center~FirewallDisableNotify~0
+HKLM~False~SOFTWARE\Policies\Microsoft\Windows\Installer~DisableMSI~0
